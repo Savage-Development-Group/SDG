@@ -58,6 +58,7 @@
 .site-header .nav-cta {
   color: #d4af37;
   border-color: #d4af37;
+  white-space: nowrap;
 }
 
 .brand-emblem {
@@ -152,17 +153,17 @@
 }
 
 .forge-homepage img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   position: absolute;
-  inset: 0;
+  inset: 5%;
   object-fit: contain;
-  object-position: center top;
+  object-position: center;
   transition: transform .55s ease;
 }
 
 .forge-homepage:hover img {
-  transform: scale(1.025);
+  transform: scale(1.015);
 }
 
 .live-ribbon {
@@ -194,6 +195,22 @@
 .live-ribbon b {
   color: #d4af37;
   font-size: 16px;
+}
+
+@media (max-width: 860px) {
+  .site-header .brand-lockup {
+    width: min(390px, calc(100vw - 190px));
+  }
+
+  .site-header nav {
+    gap: 0;
+    flex-shrink: 0;
+  }
+
+  .site-header .nav-cta {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -245,7 +262,10 @@
   }
 
   .forge-homepage img {
-    object-position: center top;
+    width: 92%;
+    height: 92%;
+    inset: 4%;
+    object-position: center;
   }
 
   .live-ribbon {

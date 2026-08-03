@@ -121,9 +121,10 @@
         <h2>Have an idea?<br><em>Let’s make it real.</em></h2>
         <p>Tell us what you’re working on. We’ll get back to you with a clear next step.</p>
       </div>
-      <form id="contact-form" class="contact-form reveal" action="#" data-contact-route="ZGFtaWFuQHNhdmFnZWRldmdyb3VwLmNvbQ==" method="POST">
+      <form id="contact-form" class="contact-form reveal" action="https://formsubmit.co/" data-contact-route="ZGFtaWFuQHNhdmFnZWRldmdyb3VwLmNvbQ==" method="POST" onsubmit="this.action='https://formsubmit.co/'+window.atob(this.dataset.contactRoute)">
         <input type="hidden" name="_subject" value="New Savage Dev Group website inquiry">
         <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_url" value="https://savagedevgroup.com/#contact">
         <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off">
         <div class="field-row"><label>Name<input name="name" type="text" placeholder="Your name" required></label><label>Email<input name="email" type="email" placeholder="you@company.com" required></label></div>
         <label>What are you looking to build?<select name="project_type" required><option value="" selected disabled>Select a project type</option><option>Marketing website</option><option>Web application</option><option>E-commerce store</option><option>Something else</option></select></label>
@@ -137,6 +138,6 @@
   <footer>
     <div class="section-shell footer-inner"><a class="brand" href="#top"><span class="brand-mark">SDG</span><span>Savage Dev Group</span></a><p>Independent studio. Built with intent.</p><p>© <span id="year"></span> Savage Dev Group</p></div>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

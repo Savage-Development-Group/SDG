@@ -322,6 +322,12 @@
     margin-left: 8px;
   }
 
+  .hero {
+    min-height: auto;
+    padding-top: 44px;
+    padding-bottom: 34px;
+  }
+
   .forge-homepage {
     min-height: 380px;
   }

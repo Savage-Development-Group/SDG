@@ -51,6 +51,10 @@
   transform: translate(-50%, -50%) scale(1.25);
 }
 
+.mobile-brand-lockup {
+  display: none;
+}
+
 .site-header nav a {
   color: #fff8df;
 }
@@ -231,7 +235,59 @@
   }
 
   .brand-lockup-image {
-    transform: translate(-50%, -50%) scale(1.58);
+    display: none;
+  }
+
+  .site-header .brand > .mobile-brand-lockup {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .mobile-brand-emblem {
+    width: clamp(45px, 25vw, 54px);
+    aspect-ratio: 1;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    border: 2px solid #e0c066;
+    border-radius: 11px;
+    color: #e4c766;
+    font: 700 clamp(16px, 5vw, 21px) "Space Grotesk";
+    letter-spacing: -.05em;
+  }
+
+  .mobile-brand-divider {
+    width: 1px;
+    height: 56px;
+    flex: 0 0 1px;
+    background: #d4af37;
+  }
+
+  .mobile-brand-copy {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mobile-brand-copy strong {
+    color: #fff8df;
+    font: 700 clamp(10.5px, 3.4vw, 13px)/1.02 "Space Grotesk";
+    letter-spacing: .055em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .mobile-brand-copy small {
+    margin-top: 5px;
+    color: #d4af37;
+    font: 600 clamp(4.2px, 1.3vw, 5.2px)/1 "Space Grotesk";
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    white-space: nowrap;
   }
 
   .brand-emblem {

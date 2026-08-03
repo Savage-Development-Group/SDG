@@ -218,8 +218,12 @@
     height: 96px;
   }
 
+  .site-header::before {
+    background: #161d14;
+  }
+
   .site-header .brand-lockup {
-    width: 225px;
+    width: min(225px, calc(100vw - 136px));
     height: 76px;
     min-height: 0;
     padding: 0;
@@ -255,6 +259,11 @@
   .site-header .nav-cta {
     padding: 10px 9px;
     font-size: 10px;
+    background: #161d14;
+  }
+
+  .site-header nav {
+    margin-left: 8px;
   }
 
   .forge-homepage {

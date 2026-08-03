@@ -8,7 +8,7 @@ Open `index.html` directly, or run any static file server from this folder.
 
 ## Contact form
 
-The form uses FormSubmit's free static-site endpoint. The first test submission sends a one-time activation email to `savage.damian@outlook.com`; approve it before expecting inquiries to be delivered.
+The form uses FormSubmit's free static-site endpoint. The first test submission sends a one-time activation message to the configured recipient; approve it before expecting inquiries to be delivered.
 
 ## GitHub Pages
 

@@ -10,10 +10,3 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
-
-const contactForm = document.getElementById('contact-form');
-
-contactForm?.addEventListener('submit', () => {
-  const recipient = window.atob(contactForm.dataset.contactRoute);
-  contactForm.action = `https://formsubmit.co/${recipient}`;
-});

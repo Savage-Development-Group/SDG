@@ -8,6 +8,93 @@
   --blue: #7d856f;
 }
 
+.site-header {
+  height: 104px;
+  border-bottom: 0;
+  color: #fff8df;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: #142218;
+  border-bottom: 1px solid rgba(212, 175, 55, .5);
+}
+
+.site-header .brand-lockup {
+  width: 286px;
+  min-height: 76px;
+  padding: 9px 0;
+  gap: 12px;
+  background: transparent;
+  color: #f4efe7;
+  border: 0;
+  box-shadow: none;
+}
+
+.site-header nav a {
+  color: #fff8df;
+}
+
+.site-header .nav-cta {
+  color: #d4af37;
+  border-color: #d4af37;
+}
+
+.brand-emblem {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #d4af37;
+  border-radius: 13px;
+  color: #e4c766;
+  background: linear-gradient(145deg, #1d3121, #0e1912);
+  font: 700 20px "Space Grotesk";
+  letter-spacing: -.05em;
+  text-shadow: 0 1px 8px rgba(212, 175, 55, .35);
+}
+
+.brand-divider {
+  align-self: stretch;
+  width: 1px;
+  flex: 0 0 1px;
+  background: linear-gradient(transparent, #d4af37 14%, #d4af37 86%, transparent);
+}
+
+.brand-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.brand-copy strong {
+  display: flex;
+  flex-direction: column;
+  color: #fff8df;
+  font: 700 12px/1.05 "Space Grotesk";
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.brand-copy small {
+  color: #d4af37;
+  font: 600 7px/1 "Space Grotesk";
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .project-image {
   background: #101a17;
 }
@@ -15,7 +102,7 @@
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: top;
   transition: transform .5s ease;
 }
@@ -56,7 +143,7 @@
   height: 100%;
   position: absolute;
   inset: 0;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center top;
   transition: transform .55s ease;
 }
@@ -97,6 +184,48 @@
 }
 
 @media (max-width: 560px) {
+  .site-header {
+    height: 88px;
+  }
+
+  .site-header .brand-lockup {
+    width: 198px;
+    min-height: 62px;
+    padding: 7px 0;
+    gap: 8px;
+  }
+
+  .site-header .brand-copy {
+    display: flex !important;
+  }
+
+  .brand-emblem {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  .brand-copy {
+    gap: 4px;
+  }
+
+  .brand-copy strong {
+    font-size: 9px;
+    letter-spacing: .1em;
+  }
+
+  .brand-copy small {
+    font-size: 5.5px;
+    letter-spacing: .08em;
+  }
+
+  .site-header .nav-cta {
+    padding: 10px 11px;
+    font-size: 11px;
+  }
+
   .forge-homepage {
     min-height: 380px;
   }

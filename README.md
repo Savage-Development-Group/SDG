@@ -2,6 +2,8 @@
 
 Static portfolio site for [savagedevgroup.com](https://savagedevgroup.com), ready for GitHub Pages.
 
+The site includes dedicated service pages, a Task Forge OS case study, company and process pages, six initial search-focused articles, structured metadata, social cards, a sitemap, robots directives, a custom 404 page, and an [SEO launch and growth playbook](SEO_PLAYBOOK.md).
+
 ## Local preview
 
 Open `index.html` directly, or run any static file server from this folder.

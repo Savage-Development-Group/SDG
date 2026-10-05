@@ -1,4 +1,5 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearElement = document.getElementById('year');
+if (yearElement) yearElement.textContent = new Date().getFullYear();
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -39,7 +40,7 @@ sendTaskForgeEvent({
 });
 
 const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', () => {
+if (contactForm) contactForm.addEventListener('submit', () => {
   const fields = new FormData(contactForm);
   if (fields.get('_honey')) return;
   sendTaskForgeEvent({

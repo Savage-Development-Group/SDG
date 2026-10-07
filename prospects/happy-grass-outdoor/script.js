@@ -17,6 +17,10 @@ nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () =>
 document.querySelector('#year').textContent = new Date().getFullYear();
 
 const reviewItems = [...document.querySelectorAll('.quote-stack blockquote')];
+reviewItems.forEach((item) => {
+  const quoteLength = item.querySelector('p').textContent.trim().length;
+  item.classList.add(quoteLength > 190 ? 'review-long' : quoteLength < 90 ? 'review-short' : 'review-medium');
+});
 const reviewsMedia = window.matchMedia('(max-width: 600px)');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let activeReview = 0;

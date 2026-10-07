@@ -17,7 +17,6 @@ nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () =>
 document.querySelector('#year').textContent = new Date().getFullYear();
 
 const reviewItems = [...document.querySelectorAll('.quote-stack blockquote')];
-const reviewCount = document.querySelector('.review-count');
 const reviewsMedia = window.matchMedia('(max-width: 600px)');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let activeReview = 0;
@@ -26,7 +25,6 @@ let reviewTimer;
 function showReview(index) {
   activeReview = (index + reviewItems.length) % reviewItems.length;
   reviewItems.forEach((item, itemIndex) => item.classList.toggle('active', itemIndex === activeReview));
-  reviewCount.textContent = `${activeReview + 1} / ${reviewItems.length}`;
 }
 
 function stopReviewTimer() {
@@ -39,16 +37,6 @@ function startReviewTimer() {
     reviewTimer = window.setInterval(() => showReview(activeReview + 1), 30000);
   }
 }
-
-document.querySelector('.review-prev').addEventListener('click', () => {
-  showReview(activeReview - 1);
-  startReviewTimer();
-});
-
-document.querySelector('.review-next').addEventListener('click', () => {
-  showReview(activeReview + 1);
-  startReviewTimer();
-});
 
 const reviewsSection = document.querySelector('.reviews');
 reviewsSection.addEventListener('pointerenter', stopReviewTimer);

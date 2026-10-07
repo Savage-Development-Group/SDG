@@ -29,3 +29,4 @@
 @media(max-width:600px){.service-feature{display:block}.service-feature>div{display:contents}.service-feature .number{display:inline-block;padding:0;background:none;color:var(--orange)}.service-feature h3{margin:7px 0}}
 @media(min-width:601px) and (max-width:900px){.about-copy{padding:58px 40px 64px}}
 @media(max-width:600px){.about-copy{padding:30px 20px 38px}}
+@media(max-width:600px){.site-footer{padding-top:30px}.footer-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:start;gap:28px 22px}.footer-brand{padding-left:12px}.footer-brand img{width:76px}.footer-brand p{font-size:16px}.footer-grid nav{min-width:0}.footer-label{margin-top:0;margin-bottom:10px}.footer-grid nav a,.footer-contact a{font-size:12px}.footer-contact{grid-column:1/-1;display:grid!important;grid-template-columns:1fr 1fr;column-gap:20px}.footer-contact .footer-label,.footer-contact a:first-of-type{grid-column:1/-1}.footer-bottom{margin-top:22px;padding-top:14px}}
